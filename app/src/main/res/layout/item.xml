@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/infoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title:"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:id="@+id/infoSinger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Singer:"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="40dp"/>
+
+
+        <TextView
+            android:id="@+id/infoId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id:"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="40dp"/>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

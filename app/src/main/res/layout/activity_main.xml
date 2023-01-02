@@ -6,13 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/buttonList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="80dp"
+        android:onClick="getTracks"
+        android:text="Get Tracks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:onClick="getTrack"
+        android:text="GET TRACK"
+        app:layout_constraintStart_toStartOf="@+id/buttonUpdate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreate" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="Delete Tracks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonList"
+        android:onClick="deleteTracks"/>
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update track"
+        app:layout_constraintStart_toStartOf="@+id/buttonList"
+        app:layout_constraintTop_toTopOf="@+id/buttonCreate"
+        android:onClick="updateTracks"/>
+
+    <Button
+        android:id="@+id/buttonCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Create track"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDelete"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDelete"
+        android:onClick="createTracks"/>
+
+    <EditText
+        android:id="@+id/trackIdBox"
+        android:layout_width="186dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Track id"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCreate"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/trackSingerBox"
+        android:layout_width="186dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Track singer"
+        app:layout_constraintEnd_toEndOf="@+id/trackIdBox"
+        app:layout_constraintTop_toBottomOf="@+id/trackIdBox" />
+
+    <EditText
+        android:id="@+id/trackTitleBox"
+        android:layout_width="186dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Track title"
+        app:layout_constraintEnd_toEndOf="@+id/trackIdBox"
+        app:layout_constraintTop_toBottomOf="@+id/trackSingerBox" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Choose what you want to do!"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Insert the inforamtion that you need:"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCreate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreate" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="409dp"
+        android:layout_height="316dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trackIdBox"
+        app:layout_constraintVertical_bias="0.5" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

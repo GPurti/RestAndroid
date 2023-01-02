@@ -6,14 +6,13 @@ public class Track {
     String id;
     String title;
     String singer;
-    static int lastId;
 
     public Track() {
-        this.id = RandomUtils.getId();
+        //this.id = RandomUtils.getId();
     }
 
-    public Track(String title, String singer) {
-        this();
+    public Track(String id, String singer,String title ) {
+        this.setId(id);
         this.setSinger(singer);
         this.setTitle(title);
     }

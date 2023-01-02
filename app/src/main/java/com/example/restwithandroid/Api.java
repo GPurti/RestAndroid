@@ -9,22 +9,23 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.DELETE;
+import retrofit2.http.Path;
 
 public interface Api {
 
-    @GET("/")
+    @GET("tracks")
     Call<List<Track>> getTracks();
 
-    @GET("/{id}")
-    Call<Track> getTrack(@Body String id);
+    @GET("tracks/{id}")
+    Call<Track> getTrack(@Path("id") String id);
 
-    @DELETE("/{id}")
-    Call<Track> deleteTrack(@Body String id);
+    @DELETE("tracks/{id}")
+    Call<Track> deleteTrack(@Path("id") String id);
 
-    @PUT("/")
+    @PUT("tracks")
     Call<Track> updateTrack(@Body Track track);
 
-    @POST("/")
+    @POST("tracks")
     Call<Track> newTrack(@Body Track track);
 
 }
